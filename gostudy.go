@@ -92,7 +92,7 @@ func chooseShownAnswers(assignment *Assignment, correct *string) map[int]*string
 	m := make(map[int]*string)
 	for i := 0; i < assignment.ShowAnswersAmount; i++ {
 		choice := rand.Intn(assignment.QuestionsAmount-1)
-		m[i] = &(assignment.Questions[choice].QuestionText)
+		m[i] = &(assignment.Questions[choice].Answer)
 		if *(m[i]) == *correct {
 			i--
 		}
